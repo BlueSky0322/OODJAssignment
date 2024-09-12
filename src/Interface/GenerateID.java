@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Classes;
+package Interface;
 
 /**
  *
- * @author Ryan Ng
+ * @author Ryan Ng, Sareindra
  */
-public class Test {
-    
+public interface GenerateID {
+    int generateID();
 }

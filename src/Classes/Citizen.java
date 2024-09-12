@@ -5,28 +5,19 @@
  */
 package Classes;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  *
- * @author Ryan Ng
+ * @author Ryan Ng, Sareindra
  */
 public class Citizen extends People {
 
     private String ic_no;
 
-    public Citizen() {
-    }
-
-    ;
+    public Citizen() {};
     
     public Citizen(Person person, String ic_no) {
         this.ic_no = ic_no;
@@ -38,27 +29,17 @@ public class Citizen extends People {
         this.address = person.address;
     }
 
-    /**
-     * Get the value of ic_no
-     *
-     * @return the value of ic_no
-     */
     public String getIc_no() {
         return ic_no;
     }
 
-    /**
-     * Set the value of ic_no
-     *
-     * @param ic_no new value of ic_no
-     */
     public void setIc_no(String ic_no) {
         this.ic_no = ic_no;
     }
 
     public String validate_icno() {
-        if (this.ic_no.isEmpty() || !isNumeric(this.ic_no)) {
-            return "Invalid IC No.";
+        if (!DataAccess.isNumeric(this.ic_no)) {
+            return "Invalid IC No.\n";
         }
         return "";
     }
@@ -78,5 +59,4 @@ public class Citizen extends People {
         }
 
     }
-
 }

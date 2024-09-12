@@ -5,18 +5,11 @@
  */
 package Main;
 
-import Classes.Vaccine;
-import Classes.Admin_Staff;
 import UI.LoginPage;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
- * @author Ryan Ng
+ * @author Ryan Ng, Sareindra
  */
 public class OODJ {
 
@@ -25,6 +18,6 @@ public class OODJ {
      */
     public static void main(String[] args) {
         LoginPage login = new LoginPage();
-        login.setVisible(true);        
+        login.setVisible(true);
     }
 }
